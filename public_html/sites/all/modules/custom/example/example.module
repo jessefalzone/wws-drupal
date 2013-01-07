@@ -1,0 +1,15 @@
+<?php
+/**
+ * Implements hook_menu.
+ */
+function example_menu() {
+    $items['example'] = array(
+      'page callback' => 'example_page',
+      'access arguments' => array('access content'),
+    );
+    return $items;
+}
+
+function example_page() {
+  return "Today's date is ". date('m-d-Y');
+}
