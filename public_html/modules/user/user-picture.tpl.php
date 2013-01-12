@@ -18,6 +18,8 @@
 ?>
 <?php if ($user_picture): ?>
   <div class="user-picture">
-    <?php print $user_picture; ?>
+    <?php dpm($account); ?>
+    <?php //print render($user_picture);?>
+    <?php theme('user_list'); ?>
   </div>
 <?php endif; ?>

@@ -84,5 +84,106 @@ function wws_discography_default_panels_layout() {
   );
   $export['album_page'] = $layout;
 
+  $layout = new stdClass();
+  $layout->disabled = FALSE; /* Edit this to true to make a default layout disabled initially */
+  $layout->api_version = 1;
+  $layout->name = 'bio_page';
+  $layout->admin_title = 'Bio Page';
+  $layout->admin_description = '';
+  $layout->category = 'wws_discography';
+  $layout->plugin = 'flexible';
+  $layout->settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center_left',
+          1 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Center',
+        'width' => '62.366462983746935',
+        'width_type' => '%',
+        'parent' => 'main-row',
+      ),
+      'center_left' => array(
+        'type' => 'region',
+        'title' => 'Center left',
+        'width' => '37.633537016253065',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['bio_page'] = $layout;
+
+  $layout = new stdClass();
+  $layout->disabled = FALSE; /* Edit this to true to make a default layout disabled initially */
+  $layout->api_version = 1;
+  $layout->name = 'track_page';
+  $layout->admin_title = 'Track page';
+  $layout->admin_description = 'Track page with lyrics';
+  $layout->category = 'wws_discography';
+  $layout->plugin = 'flexible';
+  $layout->settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Center',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => 'main-row',
+      ),
+    ),
+  );
+  $export['track_page'] = $layout;
+
   return $export;
 }

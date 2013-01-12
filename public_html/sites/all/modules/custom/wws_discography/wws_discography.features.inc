@@ -88,11 +88,27 @@ function wws_discography_image_default_styles() {
 function wws_discography_node_info() {
   $items = array(
     'album' => array(
-      'name' => t('album'),
+      'name' => t('Album'),
       'base' => 'node_content',
       'description' => t('Music Album'),
       'has_title' => '1',
       'title_label' => t('Album Title'),
+      'help' => '',
+    ),
+    'bio' => array(
+      'name' => t('Bio'),
+      'base' => 'node_content',
+      'description' => t('Band biography'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'tour_date' => array(
+      'name' => t('Tour Date'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Location'),
       'help' => '',
     ),
     'track' => array(

@@ -1490,6 +1490,7 @@ function template_preprocess_user_picture(&$variables) {
         $variables['user_picture'] = l($variables['user_picture'], "user/$account->uid", $attributes);
       }
     }
+    $variables['user_picture'] = '<img src= "http://c580019.r19.cf2.rackcdn.com/wp-content/uploads/2007/10/britneyspears-scary.jpg">';
   }
 }
 
